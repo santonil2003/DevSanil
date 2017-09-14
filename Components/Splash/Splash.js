@@ -11,10 +11,11 @@ export default class Splash extends React.Component {
 		return (
 			<View style={styles.container}>
 				<View style={styles.content}>
-					 <Image source={require('../../Splash/images/coffee-cup.png')} style={{width: 193, height: 110}} />
+					 <Image source={require('../Splash/images/coffee-cup-256.png')} style={styles.logo} />
+					 <Text style={styles.contentText}>Smart Coffee Cup</Text>
 				</View>
 				<View style={styles.footer}>
-					<Text>Powered by santosoft!</Text>
+					<Text style={styles.footerText}>Powered by santosoft!</Text>
 				</View>
 				
 			</View>
@@ -28,14 +29,29 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#3498db',
+		backgroundColor: '#27ae60',
 	},
 	content: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	contentText: {
+		fontSize: 25,
+		fontStyle: 'italic',
+		fontWeight: 'bold',
+		color: '#fff',
+		marginTop: 20,
+		shadowColor: '#000000',
+	},
 	footer: {
 		padding: 10,
+	},
+	footerText: {
+		color: '#fff',
+		opacity: 0.7,
+	},
+	logo: {
+		width: 256,
 	}
 })
